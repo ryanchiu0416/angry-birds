@@ -24,9 +24,9 @@ class BirdServiceTests: XCTestCase {
         //Given
         var birds: [Bird]!
         var error: Error?
-        
+
         let promise = expectation(description: "Completion handler is invoked")
-        
+
         //When
         self.systemUnderTest.getBirds(completion: { data, shouldntHappen in
             birds = data
@@ -34,7 +34,7 @@ class BirdServiceTests: XCTestCase {
             promise.fulfill()
         })
         wait(for: [promise], timeout: 5)
-        
+
         //Then
         XCTAssertNotNil(birds)
         XCTAssertNil(error)

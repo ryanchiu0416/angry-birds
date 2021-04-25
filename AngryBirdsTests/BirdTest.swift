@@ -17,9 +17,9 @@ class BirdTest: XCTestCase {
             description: "Looking at you like you have just said the dumbest thing it's ever heard",
             imageUrl: "https://tinyurl.com/yc8hwfx9"
         )
-        
+
         let actualValue = subjectUnderTest.debugDescription
-        
+
         let expectedValue = "Bird(name: American Crow, description: Looking at you like you have just said the dumbest thing it's ever heard)"
         XCTAssertEqual(actualValue, expectedValue)
     }
